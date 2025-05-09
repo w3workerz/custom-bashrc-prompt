@@ -1,3 +1,11 @@
+# Enable color support for ls and define LS_COLORS
+eval "$(dircolors -b)"
+export LS_COLORS="di=1;35:$LS_COLORS"
+
+# Always use colored output for ls
+alias ls='ls --color=auto'
+
+# Git status in prompt
 prompt_git() {
 	local s='';
 	local branchName='';
